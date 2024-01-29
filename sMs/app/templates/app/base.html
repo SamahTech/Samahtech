@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <title>sMs</title>
+</head>
+
+<body>
+
+    <div class="nav-box">
+        <nav>
+            <a class="selected-item" href="{% url 'app:home' %}">صفحه‌ی اصلی</a>
+            <a href="{% url 'app:units' %}">اطلاعات واحدها</a>
+            <a href="#">اطلاعات ساختمان</a>
+            <a href="#">تنظیمات</a>
+            <a href="#">درباره‌ی ما</a>
+            <a href="#">راهنمای سامانه</a>
+            <a href="{% url 'app:login' %}">ورود به سامانه</a>
+        </nav>
+    </div>
+
+    <div class="main-body">
+        {% block content %} {% endblock %}
+    </div>
+
+    <footer>
+        <p>کاربر فعال: امیر موسوی</p>
+        <p>امروز دوشنبه مورخ 1402/10/10</p>
+    </footer>
+
+</body>
+
+</html>

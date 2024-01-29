@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+
+
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'units.css' %}">
+
+<div class="unit-box">
+    <div class="unit-info">
+        <select name="unit-no" id="unit-no">
+            {% for item in 123456|make_list %}
+            <option value="{{item}}">واحد: {{item}}</option>
+            {% endfor %}
+        </select>
+        <p>خانم / آقای <strong>موسوی</strong></p>
+        <a class="btn" href="#">اطلاعات تکمیلی</a>
+    </div>
+    <div class="unit-acount">
+        
+    </div>
+</div>
+
+{% endblock %}
